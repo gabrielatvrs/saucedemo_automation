@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2025-02-11T23:13:14.096248" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\gabriela.s.tavares\projects\qa-talking\tests">
+<suite id="s1-s1" name="Tst Login" source="C:\Users\gabriela.s.tavares\projects\qa-talking\tests\tst_login.robot">
+<test id="s1-s1-t1" name="Realizar login com sucesso" line="9">
+<kw name="Abrir navegador" owner="kwd_login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-11T23:13:14.428690" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T23:13:14.428079" elapsed="12.877605"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-11T23:13:27.306205" elapsed="0.273155"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T23:13:27.579360" elapsed="0.036248"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:13:14.427007" elapsed="13.188601"/>
+</kw>
+<kw name="Dado que estou na página de login" owner="kwd_login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-11T23:13:27.617876" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-11T23:13:27.617876" elapsed="0.235756"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T23:13:27.853632" elapsed="0.025718"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:13:27.617372" elapsed="0.262987"/>
+</kw>
+<kw name="Quando insiro usuário &quot;${usuario_sucesso}&quot; e senha &quot;${senha}&quot;" owner="kwd_login" source_name="Quando insiro usuário &quot;${usuario}&quot; e senha &quot;${senha}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T23:13:27.881526" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${INPUT_USUARIO}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T23:13:27.881526" elapsed="0.188719"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T23:13:28.071312" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T23:13:28.071312" elapsed="0.049132"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-11T23:13:28.203566" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/login.png"&gt;&lt;img src="../screenshots/login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOTS_DIR}/login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-11T23:13:28.120444" elapsed="0.083122"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T23:13:28.203566" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T23:13:28.203566" elapsed="0.321271"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:13:27.880359" elapsed="0.644997"/>
+</kw>
+<kw name="Então sou autenticado com sucesso" owner="kwd_login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGO_INVENTORY}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T23:13:28.531651" elapsed="0.019323"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-11T23:13:28.754614" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/autenticado.png"&gt;&lt;img src="../screenshots/autenticado.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOTS_DIR}/autenticado.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-11T23:13:28.550974" elapsed="0.203640"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:13:28.531143" elapsed="0.223471"/>
+</kw>
+<kw name="Fechar navegador" owner="kwd_login" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-11T23:13:28.764843" elapsed="16.884254"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:13:28.764843" elapsed="16.884254"/>
+</kw>
+<tag>mandatory</tag>
+<tag>TST-1</tag>
+<status status="PASS" start="2025-02-11T23:13:14.425910" elapsed="31.223187"/>
+</test>
+<doc>Testes referentes ao login no site Saucedemo.com</doc>
+<status status="PASS" start="2025-02-11T23:13:14.123459" elapsed="31.527510"/>
+</suite>
+<status status="PASS" start="2025-02-11T23:13:14.098589" elapsed="31.554388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">mandatory</stat>
+<stat pass="1" fail="0" skip="0">TST-1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tst Login">Tests.Tst Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
